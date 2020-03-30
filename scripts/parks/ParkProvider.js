@@ -6,10 +6,10 @@ export const useParks = () => {
 }
 
 export const getParks = () => {
-    return fetch("http://developer.nps.gov/api/v1/parks?api_key=ooZUpH3kDoDNlxyLTK1AvsU20PwcIVEvfl7o9DEw")
+    return fetch("http://localhost:8088/data")
     .then(response => response.json())
     .then(parsedData => {
         console.table(parsedData)
-        parks = parsedData.data
+        parks = parsedData
     })
 }
