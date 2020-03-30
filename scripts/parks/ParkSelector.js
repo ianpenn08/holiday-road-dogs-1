@@ -20,7 +20,7 @@ contentTarget.addEventListener("change", changeEvent =>{
 
 export const ParkSelect = () => {
     const parks = useParks()
-
+debugger
     const render = (parksCollection) => {
         contentTarget.innerHTML = `
         <select class="dropdown" id="parkSelect">
