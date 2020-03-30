@@ -5,7 +5,7 @@ const contentTarget = document.querySelector(".attractionDropdown")
 const eventHub = document.querySelector(".container")
 
 contentTarget.addEventListener("change", changeEvent =>{
-    if(changeEvent.target.id === "attractionSelect")
+    if(changeEvent.target.id === "attractionSelect"){
     const theAttractionThatWasChosen = changeEvent.target.value
 
     const attractionChosenEvent = new CustomEvent("attractionChosen",{
@@ -13,7 +13,7 @@ contentTarget.addEventListener("change", changeEvent =>{
             chosenAttraction: theAttractionThatWasChosen
         }
     }) 
-    eventHub.dispatchEvent(attractionChosenEvent)
+    eventHub.dispatchEvent(attractionChosenEvent)}
 })
 
 export const AttractionSelect = () => {
@@ -22,10 +22,10 @@ export const AttractionSelect = () => {
     const render = (attractionsCollection) => {
         contentTarget.innerHTML = `
         <select class="dropdown" id="attractionSelect">
-            <option value = "0">Select A National Park</option>
+            <option value = "0">Select Bizzare Attraction</option>
             ${
                 attractionsCollection.map(singleAttraction => {
-                    return `<option>${singleAttraction.id}</option>`
+                    return `<option value = "${singleAttraction.id}">${singleAttraction.name}</option>`
                 })
             }
         </select>
@@ -33,4 +33,7 @@ export const AttractionSelect = () => {
     }
 
     render(attractions)
+
 }
+
+
