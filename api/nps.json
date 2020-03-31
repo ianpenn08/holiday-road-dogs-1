@@ -1,7 +1,7 @@
 {
     "data": [
         {
-            "contacts": {
+            "contacts": { 
                 "phoneNumbers": [
                     {
                         "phoneNumber": "2024266841",
@@ -85,7 +85,7 @@
             "designation": "",
             "parkCode": "afam",
             "addresses": [
-                {
+                { 
                     "postalCode": "20001",
                     "city": "Washington",
                     "stateCode": "DC",
