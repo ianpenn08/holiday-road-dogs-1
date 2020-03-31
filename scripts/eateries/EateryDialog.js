@@ -1,4 +1,6 @@
-const contentTarget = document.querySelector(".eatery__button")
+
+
+const contentTarget = document.querySelector(".eatery__buttonLoc")
 const eventHub = document.querySelector(".container")
 
 
