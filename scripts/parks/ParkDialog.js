@@ -19,33 +19,12 @@ eventHub.addEventListener("parkChosen", clickEvent => {
     })
     console.log(parkObject.fullName)
 
-    // if (clickEvent.target.class === "parkInfo") {
-    //     // Create a custom event to tell any interested component that the user wants to see park information
-    //     const customEvent = new CustomEvent("parkButtonClicked")
-
-    //     // Dispatch it to event hub
-    //     //eventHub.dispatchEvent(customEvent)
-    //     // how do i see the park dialog
-
-    // }
 })
 
 contentTarget.addEventListener("click", e=>{
     if(e.target.id === "parkInfo"){
-        // console.log('fullName: -> ', parkObject.fullName)
-        // console.log('parkCode: -> ', parkObject.parkCode)
-        // console.log('City: -> ', parkObject.addresses[0].city)
         parkDetails.innerHTML = parkHTML(parkObject)
-    }
-    // Create a custom event to tell any interested component that the user wants to see park information
-    // const customEvent = new CustomEvent("parkButtonClicked",{
-    //     detail:{
-    //         parkDetailButton: 
-    //     }
-    // })
-
-    //     // Dispatch it to event hub
-    //     //eventHub.dispatchEvent(customEvent)    
+    }  
 })
 
 export const ParkButton = () => {

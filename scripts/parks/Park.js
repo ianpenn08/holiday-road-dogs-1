@@ -14,9 +14,15 @@ export const parkHTML = (park) => {
                 <div>Phone Number: ${park.contacts.phoneNumbers[0].phoneNumber}</div>
                 <div>Email: ${park.contacts.emailAddresses[0].emailAddress}</div>
                 <div>${park.description}</div>
-                
+                <button id = "park-close-button">Return to park</button>
             </div>
         </div>
     `
 }
 
+const parkDetails = document.querySelector(".park__details")
+parkDetails.addEventListener("click", e => {
+    if(e.target.id === "park-close-button"){
+        parkDetails.style.display = "none"
+    }
+})

@@ -13,5 +13,6 @@ const eateryHTML = (eatery) => {
     `
 
 
-export default eateryHTML
 }
+
+export default eateryHTML
