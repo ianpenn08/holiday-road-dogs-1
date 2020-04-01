@@ -4,6 +4,14 @@ import { getAttractions } from "./attractions/AttractionProvider.js";
 import { AttractionSelect }  from "./attractions/AttractionsSelector.js";
 import { getParks } from "./parks/ParkProvider.js";
 import { ParkSelect } from "./parks/ParkSelector.js";
+import "./parks/ParkDialog.js"
+import { ParkButton } from "./parks/ParkDialog.js";
+// import { EateryButton } from "./eateries/EateryDialog.js";
+// import { AttractionButton } from "./attractions/AttractionDialog.js";
+
+
+
+
 
 import "./weather/WeatherList.js";
 
@@ -20,3 +28,9 @@ getParks().then(ParkSelect)
 getAttractions().then(AttractionSelect)
 
 
+<<<<<<< HEAD
+=======
+ParkButton()
+// EateryButton()
+// AttractionButton()
+>>>>>>> master
