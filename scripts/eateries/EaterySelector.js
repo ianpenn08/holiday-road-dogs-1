@@ -27,7 +27,7 @@ export const eaterySelector = () => {
         ${
             // Uses map to iterate over the array of eateries to get back the individual eatery businessNames.
             eateryCollection.map(eatery => {
-                return `<option>${eatery.businessName}</option>`
+                return `<option value = "${eatery.city}">${eatery.businessName}</option>`
             })
         }
         </select>`

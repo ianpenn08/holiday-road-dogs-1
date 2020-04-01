@@ -1,13 +1,10 @@
-const eateryHTML = (eatery) => {
+export const eateryHTML = (eatery) => {
     return `
         <div class="eateryInfo">
-            <div class="eatery__name">${eatery.businessName}</div>
-            <button class="eatery__button">Eatery Info</button>
-            <dialog class="eatery__dialog">
                 <div>Location: ${eatery.city}, ${eatery.state}</div>
-                <div>Pet Friendly?: ${eatery.amenities.petFriendly}</div>
+                <div>Pet Friendly?: ${eatery.ameneties.petFriendly}</div>
                 <div>${eatery.description}</div>
-                <button class="button--close">Return to Itinerary</button>
+                <button id="eatery-close">Return to Eatery</button>
             </dialog>
         </div>
     `
@@ -15,4 +12,10 @@ const eateryHTML = (eatery) => {
 
 }
 
-export default eateryHTML
+const eateryDetails = document.querySelector(".eatery__details")
+eateryDetails.addEventListener("click", e => {
+    if(e.target.id === "eatery-close"){
+        eateryDetails.style.display = "none"
+    }
+})
+
