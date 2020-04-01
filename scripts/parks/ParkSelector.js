@@ -11,7 +11,7 @@ contentTarget.addEventListener("change", changeEvent =>{
 
     const parkChosenEvent = new CustomEvent("parkChosen",{
         detail:{
-            chosenpark: theParkThatWasChosen
+            chosenPark: theParkThatWasChosen
         }
     }) 
     eventHub.dispatchEvent(parkChosenEvent)}
@@ -26,7 +26,7 @@ export const ParkSelect = () => {
             <option value = "0">Select National Park</option>
             ${
                 parksCollection.map(singlePark => {
-                    return `<option value = "${singlePark.parkCode}">${singlePark.fullName}</option>`
+                    return `<option id = "${singlePark.addresses[0].city}" value = "${singlePark.parkCode}">${singlePark.fullName}</option>`
                 })
             }
         </select>

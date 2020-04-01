@@ -5,7 +5,7 @@ const eventHub = document.querySelector(".container")
 
 contentTarget.addEventListener("change", e=>{
     if(e.target.id === "eaterySelect"){
-        const selectedChosenEatery = new CustomEvent("selectedChosen", {
+        const selectedChosenEatery = new CustomEvent("eateryChosen", {
             detail: {
                 eateryChosen: e.target.value
             }
