@@ -8,8 +8,7 @@ const eventHub = document.querySelector(".container")
 let parkObject = []
 
 eventHub.addEventListener("parkChosen", clickEvent => {
-    const parkChosen = clickEvent.detail.chosenpark
-    console.log("parkChosen: -> ",parkChosen) ///afam
+    const parkChosen = clickEvent.detail.chosenPark
     const parks = useParks() // all parks
     parkObject = parks.find(park=>{ // individual parks
         if(park.parkCode === parkChosen){
@@ -17,7 +16,6 @@ eventHub.addEventListener("parkChosen", clickEvent => {
         }
         return false
     })
-    console.log(parkObject.fullName)
 
 })
 
