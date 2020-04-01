@@ -1,15 +1,24 @@
-const attractionHTML = (attraction) => {
+const returnItineraryButton = document.querySelector(".button--close")
+
+returnItineraryButton.addEventListener("click", clickEvent => {
+    console.log('button clicked')
+}) 
+
+
+export const attractionHTML = (attraction) => {
     return `
         <div class="attractionInfo">
-            <div class="attraction__name">${attraction.name}</div>
-            <button class="attraction__button">Bizarrerie Info</button>
-            <dialog class="attraction__dialog">
-                <div>Location: ${attraction.city}, ${attraction.state}</div>
-                <div>${attraction.description}
-                <button class="button--close">Return to Itinerary</button>
-            </dialog>
+            <div>Name: ${attraction.name}</div>
+            <div>Location: ${attraction.city}, ${attraction.state}</div>
+            <div>Description: ${attraction.description}</div>
+            <button id="attraction-close-button">Return to Attraction</button>
         </div>
     `
 }
 
-export default attractionHTML
+const attractionDetails = document.querySelector(".attraction__details")
+attractionDetails.addEventListener("click", e => {
+    if(e.target.id === "attraction-close-button"){
+        attractionDetails.style.display = "none"
+    }
+})
