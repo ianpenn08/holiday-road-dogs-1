@@ -12,7 +12,7 @@ contentTarget.addEventListener("change", changeEvent =>{
 
     const parkChosenEvent = new CustomEvent("parkChosen",{
         detail:{
-            chosenpark: theParkThatWasChosen
+            chosenPark: theParkThatWasChosen
         }
     }) 
     eventHub.dispatchEvent(parkChosenEvent)}
