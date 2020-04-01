@@ -1,8 +1,6 @@
 const returnItineraryButton = document.querySelector(".button--close")
 
 returnItineraryButton.addEventListener("click", clickEvent => {
-    // const parkDetails = document.querySelector(".park__details")
-    // parkDetails.style.display = ""
     console.log('button clicked')
 }) 
 
