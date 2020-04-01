@@ -1,6 +1,7 @@
 import { useWeather, getWeather  } from "./WeatherProvider.js"
 import { useParks } from '../parks/ParkProvider.js'
-// import { WeatherHTML } from "./Weather.js"
+import { WeatherHTML } from './Weather.js'
+
 
 
 const contentTarget = document.querySelector(".weatherContainer")
@@ -16,18 +17,25 @@ eventHub.addEventListener("parkChosen", parkChosenEvent => {
     
 
 
-let parkLat = ""
-let parkLong = ""
+    let parkLat = ""
+    let parkLong = ""
 
-const parkCoordinates = (location) => {
-    parkLat = location.latitude
-    parkLong = location.longitude
-    
-}
+    const parkCoordinates = (location) => {
+        parkLat = location.latitude
+        parkLong = location.longitude
+        
+    }
 
-parkCoordinates(selectedPark)
+    parkCoordinates(selectedPark)
 
-getWeather(parkLat, parkLong)
+    getWeather(parkLat, parkLong)
+    .then( () => {
+        let weather = useWeather()
+        return weather
+    })
+    .then((weatherObject) => {
+        contentTarget.innerHTML += weatherObject.list.map(singleObject => WeatherHTML(singleObject))
+    }) 
 
 
 
