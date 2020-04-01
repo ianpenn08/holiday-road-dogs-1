@@ -27,7 +27,9 @@ const parkCoordinates = (location) => {
 
 parkCoordinates(selectedPark)
 
-console.log(parkLat, parkLong)
+getWeather(parkLat, parkLong)
+
+
 
 })
 
