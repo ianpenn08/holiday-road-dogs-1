@@ -31,13 +31,13 @@ eventHub.addEventListener("parkChosen", parkChosenEvent => {
     getWeather(parkLat, parkLong)
     .then( () => {
         let weather = useWeather()
-        return weather
+        
+        const noonForecasts = weather.filter((eachDay) => {
+            return eachDay.dt_txt.split(" ")[1] === "12:00:00"
+        })
+        contentTarget.innerHTML += noonForecasts.map(singleObject => WeatherHTML(singleObject)) 
     })
-    .then((weatherObject) => {
-        contentTarget.innerHTML += weatherObject.list.map(singleObject => WeatherHTML(singleObject))
-    }) 
-
-
+        // filter array to show certain TimeRanges, then render onto the DOM / use dt_txt for the time  
 
 })
 
