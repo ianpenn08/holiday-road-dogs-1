@@ -2,8 +2,6 @@ import { useWeather, getWeather  } from "./WeatherProvider.js"
 import { useParks } from '../parks/ParkProvider.js'
 import { WeatherHTML } from './Weather.js'
 
-
-
 const contentTarget = document.querySelector(".weatherContainer")
 const eventHub = document.querySelector(".container")
 
@@ -15,8 +13,6 @@ eventHub.addEventListener("parkChosen", parkChosenEvent => {
         return chosenParkCode === parkObject.parkCode
     })
     
-
-
     let parkLat = ""
     let parkLong = ""
 
@@ -28,16 +24,18 @@ eventHub.addEventListener("parkChosen", parkChosenEvent => {
 
     parkCoordinates(selectedPark)
 
+
     getWeather(parkLat, parkLong)
     .then( () => {
         let weather = useWeather()
         
+        // filter array to show certain TimeRanges, then render onto the DOM / use dt_txt for the time 
         const noonForecasts = weather.filter((eachDay) => {
-            return eachDay.dt_txt.split(" ")[1] === "12:00:00"
+            return eachDay.dt_txt.split(" ")[1] === "12:00:00" 
         })
-        contentTarget.innerHTML += noonForecasts.map(singleObject => WeatherHTML(singleObject)) 
+        contentTarget.innerHTML = noonForecasts.map(singleObject => WeatherHTML(singleObject)).join(" ")
     })
-        // filter array to show certain TimeRanges, then render onto the DOM / use dt_txt for the time  
+    
 
 })
 
