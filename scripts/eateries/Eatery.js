@@ -1,4 +1,4 @@
-const eateryHTML = (eatery) => {
+export const eateryHTML = (eatery) => {
     return `
         <div class="eateryInfo">
             <div class="eatery__name">${eatery.businessName}</div>
@@ -11,8 +11,6 @@ const eateryHTML = (eatery) => {
             </dialog>
         </div>
     `
-
-
 }
 
-export default eateryHTML
+ 

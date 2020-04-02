@@ -1,0 +1,32 @@
+.invisible{
+    display: none;
+}
+.parkInfo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 33%;
+    padding: 10px;
+    background-color: rgb(216, 170, 158);
+    border-radius: 10px;
+    position: relative;
+    line-height: 1.5;
+}
+.parkInfo:hover{
+    box-shadow: -10px 16px 20px rgba(131, 131, 224, 0.2);;
+}
+.park_description{
+    max-width: 90%;
+}
+#park-close-button{
+    font-size: 30px;
+    color: rgb(126, 91, 79);
+    float: right;
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+#park-close-button:hover{
+    color: rgb(114, 65, 37);
+    font-size: 33px;
+    text-shadow:1px 1px 2px rgb(199, 158, 158), 0 0 1em rgb(140, 140, 185), 0 0 0.2em rgb(103, 173, 162);
+}

@@ -1,0 +1,20 @@
+.bigDropdown{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+@media screen and (max-width:1081px){
+    .bigDropdown{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .bigDropdown_item{
+        flex-basis: 50%;
+    }
+}
+@media screen and (max-width:600px){
+    .bigDropdown{
+        flex-direction: column;
+    }
+}
