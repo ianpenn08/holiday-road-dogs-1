@@ -1,8 +1,4 @@
-const returnItineraryButton = document.querySelector(".button--close")
 
-returnItineraryButton.addEventListener("click", clickEvent => {
-    console.log('button clicked')
-}) 
 
 
 export const parkHTML = (park) => {

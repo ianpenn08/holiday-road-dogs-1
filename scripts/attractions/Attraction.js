@@ -1,10 +1,3 @@
-const returnItineraryButton = document.querySelector(".button--close")
-
-returnItineraryButton.addEventListener("click", clickEvent => {
-    console.log('button clicked')
-}) 
-
-
 export const attractionHTML = (attraction) => {
     return `
         <div class="attractionInfo">
