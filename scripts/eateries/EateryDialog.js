@@ -7,12 +7,11 @@ const eventHub = document.querySelector(".container")
 let eateryObject = []
 
 eventHub.addEventListener("eateryChosen", clickEvent => {
-    // clicked event
+    
     const eateryChosen = clickEvent.detail.eateryChosen
-    console.log("E-> ",eateryChosen)
-    // collection of eateries
+
     const eateries = useEateris()
-    // loop over each eatries to get one eatry that was clicked
+    
     eateryObject = eateries.find(eatery => {
         if(eateryChosen === eatery.city){
             return true

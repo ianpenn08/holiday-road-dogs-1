@@ -1,10 +1,10 @@
 export const eateryHTML = (eatery) => {
     return `
         <div class="eateryInfo">
-                <div>Location: ${eatery.city}, ${eatery.state}</div>
-                <div>Pet Friendly?: ${eatery.ameneties.petFriendly}</div>
-                <div>${eatery.description}</div>
-                <button id="eatery-close">Return to Eatery</button>
+                <span id="eatery-close">&times;</span>
+                <div><span class ="detailsInfo">Location:</span> ${eatery.city}, ${eatery.state}</div>
+                <div><span class ="detailsInfo">Pet Friendly:</span> ${eatery.ameneties.petFriendly ? "Yes" : "No"}</div>
+                <div><span class ="detailsInfo">Description:</span> ${eatery.description}</div>
             </dialog>
         </div>
     `
