@@ -5,18 +5,18 @@ import { AttractionSelect }  from "./attractions/AttractionsSelector.js";
 import { getParks } from "./parks/ParkProvider.js";
 import { ParkSelect } from "./parks/ParkSelector.js";
 import { ParkButton } from "./parks/ParkDialog.js";
-import {EateryButton} from"./eateries/EateryDialog.js"
-// import { EateryButton } from "./eateries/EateryDialog.js";
-// import { AttractionButton } from "./attractions/AttractionDialog.js";
+import { AttractionButton } from "./attractions/AttractionDialog.js";
+import { EateryButton } from "./eateries/EateryDialog.js";
 import "./weather/WeatherList.js";
 
 
-// Gets data from api. Once data is ready eateryselector method runs.
+
 getEateries().then(eaterySelector)
 getParks().then(ParkSelect)
 getAttractions().then(AttractionSelect)
 
 
 ParkButton()
+AttractionButton()
 EateryButton()
-// AttractionButton()
+
