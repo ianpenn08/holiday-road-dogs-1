@@ -10,8 +10,8 @@ let attractionObject = []
 
 eventHub.addEventListener("attractionChosen", clickEvent => {
     const attractionChosen = clickEvent.detail.attractionChosen
-    const attractions = useAttractions() // all attraction
-    attractionObject = attractions.find(attraction => { // individual attraction
+    const attractions = useAttractions() 
+    attractionObject = attractions.find(attraction => { 
         if(attractionChosen === attraction.city){
             return true
         }

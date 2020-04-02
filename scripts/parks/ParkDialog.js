@@ -9,8 +9,8 @@ let parkObject = []
 
 eventHub.addEventListener("parkChosen", clickEvent => {
     const parkChosen = clickEvent.detail.chosenPark
-    const parks = useParks() // all parks
-    parkObject = parks.find(park=>{ // individual parks
+    const parks = useParks() 
+    parkObject = parks.find(park=>{ 
         if(park.parkCode === parkChosen){
             return true
         }
