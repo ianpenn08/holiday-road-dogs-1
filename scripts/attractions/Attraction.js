@@ -8,10 +8,11 @@ returnItineraryButton.addEventListener("click", clickEvent => {
 export const attractionHTML = (attraction) => {
     return `
         <div class="attractionInfo">
-            <div>Name: ${attraction.name}</div>
-            <div>Location: ${attraction.city}, ${attraction.state}</div>
-            <div>Description: ${attraction.description}</div>
-            <button id="attraction-close-button">Return to Attraction</button>
+            <span id="attraction-close-button">&times;</span>
+            <div><span class="detailsInfo">Name:</span> ${attraction.name}</div>
+            <div><span class="detailsInfo">Location:</span> ${attraction.city}, ${attraction.state}</div>
+            <div><span class="detailsInfo">Description:</span> ${attraction.description}</div>
+            
         </div>
     `
 }
