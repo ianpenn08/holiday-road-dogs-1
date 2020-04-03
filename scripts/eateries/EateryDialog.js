@@ -24,7 +24,6 @@ eventHub.addEventListener("eateryChosen", clickEvent => {
 export const EateryButton = () => {
     contentTarget.innerHTML = "<button id='eateryInfo'>Eatery Info</button>"
 }
-const eateryInfoButton = document.querySelector("#eateryInfo")
 contentTarget.addEventListener("click", e=>{
     if (e.target.id === "eateryInfo"){
         eateryDetails.innerHTML = eateryHTML(eateryObject)

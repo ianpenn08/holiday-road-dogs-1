@@ -25,10 +25,10 @@ export const AttractionButton = () => {
     attraction__buttonLoc.innerHTML = "<button id='attractionInfo'>Attraction Info</button>"
 }
 
-const attractionInfoButton = document.querySelector("#attractionInfo")
 contentTarget.addEventListener("click", event=>{
     if(event.target.id === "attractionInfo"){
         attraction__details.innerHTML = attractionHTML(attractionObject)
+        attraction__details.showModal()
     }  
 })
 
