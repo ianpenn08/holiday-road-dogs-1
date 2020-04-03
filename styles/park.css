@@ -6,7 +6,6 @@
     padding: 10px;
     background-color: rgb(216, 170, 158);
     border-radius: 10px;
-    position: relative;
     line-height: 1.5;
 }
 .park__details:hover, .attraction__details:hover, .eatery__details:hover{
