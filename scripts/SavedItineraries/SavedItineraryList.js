@@ -4,21 +4,18 @@ import { savedItineraryObject } from "./SavedItinerary.js";
 const contentTarget = document.querySelector(".savedItinerariesContainer")
 const eventHub = document.querySelector(".container")
 
-contentTarget.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id.startsWith("deleteSavedItinerary--")) {
-        const [prefix,itineraryId] = clickEvent.target.id.split("--")
-        deleteSavedItinerary(itineraryId)
-    }
-})
 
 
+eventHub.addEventListener(/*"Event Name Goes Here"*/, event => render())
 
 
+const render =() => {
+    getSavedItinerary().then(() => {
+            const allSavedItineraries = useSavedItinerary()
 
-getSavedItinerary().then(() => {
-    const everySavedItinerary = useSavedItinerary()
+            const
 
-    contentTarget.innerHTML = everySavedItinerary.map(
         
-    )
-})
+    })
+}
+
