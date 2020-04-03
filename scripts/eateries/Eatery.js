@@ -4,7 +4,7 @@ export const eateryHTML = (eatery) => {
                 <div><span class ="detailsInfo">Location:</span> ${eatery.city}, ${eatery.state}</div>
                 <div><span class ="detailsInfo">Pet Friendly:</span> ${eatery.ameneties.petFriendly ? "Yes" : "No"}</div>
                 <div><span class ="detailsInfo">Playground:</span> ${eatery.ameneties.playground ? "Yes" : "No"}</div>
-                <div><span class ="detailsInfo">Description:</span> ${eatery.description}</div>
+                <div class = "eatery_park_description"><span class ="detailsInfo">Description:</span> ${eatery.description}</div>
             </dialog>
         </div>
     `
