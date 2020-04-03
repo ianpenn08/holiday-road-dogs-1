@@ -1,0 +1,16 @@
+.park__details, .attraction__details, .eatery__details{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-color: rgb(160, 83, 153);
+    width: 33%;
+    padding: 10px;
+    background-color: rgb(216, 170, 158);
+    border-radius: 10px;
+    line-height: 1.5;
+}
+.park__details:hover, .attraction__details:hover, .eatery__details:hover{
+    box-shadow: -10px 16px 20px rgba(131, 131, 224, 0.2);;
+}
+.park_description, .eatery_park_description, .attraction_description{
+    max-width: 90%;
+}

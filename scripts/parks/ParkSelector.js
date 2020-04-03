@@ -5,16 +5,17 @@ const contentTarget = document.querySelector(".parkDropdown")
 const eventHub = document.querySelector(".container")
 
 contentTarget.addEventListener("change", changeEvent =>{
-
+    console.log("-> ", changeEvent.target.value)
     if(changeEvent.target.id === "parkSelect"){
-    const theParkThatWasChosen = changeEvent.target.value
-
-    const parkChosenEvent = new CustomEvent("parkChosen",{
-        detail:{
-            chosenPark: theParkThatWasChosen
-        }
-    }) 
-    eventHub.dispatchEvent(parkChosenEvent)}
+        if(changeEvent.target.value !== "0"){
+            const theParkThatWasChosen = changeEvent.target.value
+            const parkChosenEvent = new CustomEvent("parkChosen",{
+                detail:{
+                    chosenPark: theParkThatWasChosen
+                }
+            }) 
+            eventHub.dispatchEvent(parkChosenEvent)}
+        } 
 })
 
 export const ParkSelect = () => {
