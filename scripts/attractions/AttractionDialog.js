@@ -6,6 +6,7 @@ const contentTarget = document.querySelector(".previewContainer")
 const attraction__details = document.querySelector(".attraction__details")
 
 const eventHub = document.querySelector(".container")
+const preview_attraction = document.querySelector(".preview_attraction")
 let attractionObject = []
 
 eventHub.addEventListener("attractionChosen", clickEvent => {
@@ -17,6 +18,9 @@ eventHub.addEventListener("attractionChosen", clickEvent => {
         }
         return false
     })
+    preview_attraction.innerHTML = `<div >${attractionObject.name}</div>`
+    
+
 })
 
 
@@ -31,24 +35,3 @@ contentTarget.addEventListener("click", event=>{
         attraction__details.showModal()
     }  
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -8,6 +8,8 @@ import { ParkButton } from "./parks/ParkDialog.js";
 import { AttractionButton } from "./attractions/AttractionDialog.js";
 import { EateryButton } from "./eateries/EateryDialog.js";
 import "./weather/WeatherList.js";
+import { SaveItinerary } from "./ItineraryPreview/preview.js";
+
 
 
 
@@ -19,4 +21,4 @@ getAttractions().then(AttractionSelect)
 ParkButton()
 AttractionButton()
 EateryButton()
-
+SaveItinerary()

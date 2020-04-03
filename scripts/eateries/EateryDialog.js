@@ -4,6 +4,7 @@ import {eateryHTML} from "./Eatery.js"
 const contentTarget = document.querySelector(".eatery__buttonLoc")
 const eateryDetails = document.querySelector(".eatery__details")
 const eventHub = document.querySelector(".container")
+const preview_eatery = document.querySelector(".preview_eatery")
 let eateryObject = []
 
 eventHub.addEventListener("eateryChosen", clickEvent => {
@@ -18,7 +19,7 @@ eventHub.addEventListener("eateryChosen", clickEvent => {
         }
         return false
     }) 
-    
+    preview_eatery.innerHTML = `<div>${eateryObject.businessName}</div>`
 })
 
 export const EateryButton = () => {

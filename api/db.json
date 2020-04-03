@@ -1,3 +1,8 @@
 {
-	"itineraries": []
+	"itineraries": [
+		{
+			"id": 1,
+			"attractionName": "nashville shore"
+		}
+	]
 }

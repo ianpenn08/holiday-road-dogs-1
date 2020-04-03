@@ -7,6 +7,7 @@ let parkObject = []
 const contentTarget = document.querySelector(".park__buttonLoc")
 const parkDetails = document.querySelector(".park__details")
 const eventHub = document.querySelector(".container")
+const preview_park = document.querySelector(".preview_park")
 
 eventHub.addEventListener("parkChosen", customEvent => {
     const parkChosen = customEvent.detail.chosenPark
@@ -18,6 +19,7 @@ eventHub.addEventListener("parkChosen", customEvent => {
             }
             return false
         })
+        preview_park.innerHTML = `<div>${parkObject.fullName}</div>`
     }
 })
 
