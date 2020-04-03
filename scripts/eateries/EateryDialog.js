@@ -28,5 +28,6 @@ const eateryInfoButton = document.querySelector("#eateryInfo")
 contentTarget.addEventListener("click", e=>{
     if (e.target.id === "eateryInfo"){
         eateryDetails.innerHTML = eateryHTML(eateryObject)
+        eateryDetails.showModal()
     }
 })  
