@@ -6,7 +6,6 @@ let parkObject = []
 
 const contentTarget = document.querySelector(".park__buttonLoc")
 const parkDetails = document.querySelector(".park__details")
-const parkCloseDialogButton = document.querySelector(".parkInfo")
 const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("parkChosen", customEvent => {
@@ -20,27 +19,13 @@ eventHub.addEventListener("parkChosen", customEvent => {
             return false
         })
     }
-    
-
-})
-
-
-eventHub.addEventListener("parkCloseDialogButton", customEvent => {
-    visibility = !visibility
-    if (visibility) {
-        parkDetails.classList.remove("invisible")
-        parkDetails.innerHTML = parkHTML(parkObject)
-    }
-    else {
-        parkDetails.classList.add("invisible")
-        //parkDetails.style.display = "none"
-    }
 })
 
 contentTarget.addEventListener("click", e=>{
     if(e.target.id === "parkInfo"){
         parkDetails.innerHTML = parkHTML(parkObject)
-    }  
+        parkDetails.showModal()
+    }
 })
 
 export const ParkButton = () => {
